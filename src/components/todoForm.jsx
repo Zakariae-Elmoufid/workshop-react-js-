@@ -2,7 +2,7 @@ import  React ,{useState} from "react";
 import Button from './button'
 
 
-function TodoForm({isOpen,onClose ,addTask }){
+function TodoForm({isOpen,onClose , onAdd }){
     
     const  [startDate , setStartDate]  = useState('');
     const [endDate , setEndDate]  = useState('');
@@ -16,22 +16,26 @@ function TodoForm({isOpen,onClose ,addTask }){
             endDate,
             task
          };
+         const existingTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+         const updatedTasks = [...existingTasks, newTask];
 
-         addTask(newTask);
+         localStorage.setItem('tasks',JSON.stringify(updatedTasks));
+         onAdd();
     }
+
 
      
     return (
      <form  onSubmit={handlSubmit} className="w-80 mx-auto my-10 p-10 bg-gray-200" > 
         <div className="flex flex-col ">
           <label htmlFor="">Start Date</label>
-          <input type="date"
+          <input type="time"
            className="border border-black p-2 rounded-lg"  
            onChange={ (e) => setStartDate(e.target.value) }/>
         </div>
         <div className="flex flex-col ">
           <label htmlFor="">End Date</label>
-          <input type="date"
+          <input type="time"
            className="border border-black p-2 rounded-lg"
            onChange={ (e) => setEndDate(e.target.value) }/>
         </div>

@@ -1,14 +1,14 @@
 import React from 'react';
-import SideBar from './components/sideBar';
+import { Routes , Route} from 'react-router-dom';
 import { FcLock } from "react-icons/fc";
+import Home from './components/home.jsx';
+
 import './index.css';
 
 
 function App() {
  return (
-    <div className='grid grid-cols-[300px 1fr] '>
-      <SideBar />
-    </div>
+    <Home/>
   );
 }
 

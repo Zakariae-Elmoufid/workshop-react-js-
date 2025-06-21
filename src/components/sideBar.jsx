@@ -6,7 +6,7 @@ import NavItem from '../ui/navItem';
 function sideBar(){
     return (
          <div className="w-[300px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] bg-white">
-              <div className="p-5 mt-4 mb-8">
+              <div className="p-5 my-4 ">
                 <h1 className="bg-gradient-to-r from-main to-secondary text-transparent bg-clip-text font-semibold text-2xl">Goal Manager</h1>
                 <p>Productivity Dashboard</p>
               </div>

@@ -12,8 +12,8 @@ function sideBar(){
               </div>
               <nav>
                 <ul className="flex flex-col">
-                    <NavItem icon={"📊"} children={"Dashboard"}  link={'/#'}  />
-                    <NavItem icon={"🎯"} children={"Dashboard"}  link={'/#'}  />
+                    <NavItem icon={"📊"} children={"Dashboard"}  link={'/'}  />
+                    <NavItem icon={"🎯"} children={"Goals"}  link={'/goals'}  />
                     <NavItem icon={"📅"} children={"Tasks"}  link={'/#'}  />
                     <NavItem icon={"📈"} children={"Analytics"}  link={'/#'}  />
                     <NavItem icon={"💡"} children={"Reviews"}  link={'/#'}  />

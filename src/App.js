@@ -1,14 +1,18 @@
 import React from 'react';
 import { Routes , Route} from 'react-router-dom';
 import { FcLock } from "react-icons/fc";
-import Home from './components/home.jsx';
+import Home from './pages/home.jsx';
+import Goals from './pages/Goals.jsx'
 
 import './index.css';
 
 
 function App() {
  return (
-    <Home/>
+  <Routes>
+   <Route path='/' element={<Home/>} />
+   <Route path='/goals' element={<Goals/>}/>
+  </Routes>
   );
 }
 

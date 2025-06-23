@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 
-console.log( window.location.pathname);
 function navItem({icon , children , link , className="" }){
    const isActive =   window.location.pathname == link ;
    const activeClass  = isActive ? "bg-blue-100 border-main" : "";
